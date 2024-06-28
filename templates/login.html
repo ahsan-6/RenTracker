@@ -1,0 +1,33 @@
+{% load static %}
+<head>
+    <title>RenTracker</title>
+</head>
+
+
+
+<body>
+    {% include 'head.html' %}
+    <div class="log-reg">
+        <div class="forms">
+            <form method="post" action="">
+                {% csrf_token %}
+
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="msg">{{message}}</div>
+                    {% endfor %}
+                {% endif %}
+                <div class="block">Username:</div>
+                <input type="text" name = "username" placeholder="Enter username">
+
+                <div class="block">Password:</div>
+                <input type="password" name = "password" placeholder="Enter password">
+
+                <input class="form-buttons" type="submit" value = "Log in">
+
+            </form>
+
+            <div>New here? <a href="{% url 'register' %}">Register here</a> </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Add property</title>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <div class = "forms">
+        <div id="page-heading">
+            Add property
+        </div>
+    
+        <form action="" method = "POST">
+            {% csrf_token %}
+
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="msg">{{message}}</div>
+                {% endfor %}
+            {% endif %}
+
+            <div class = "block">Address:</div>
+            <textarea name = 'address'></textarea>
+            <br>
+            
+            <div>Type:</div>
+            <select name="propType">
+                <option value="house">House</option>
+                <option value="bed">Bed</option>
+            </select>
+            <br>
+
+            <div class = "block">Rent:</div>
+            <input type="number" name="rent" placeholder="Enter rent">
+            <br>
+                <input class = "form-buttons"  type = "submit" value = 'Save'>
+        </form>
+        
+    </div>
+</body>
+</html>

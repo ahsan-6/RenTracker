@@ -1,0 +1,52 @@
+.name{
+    font-size: 34px;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+}
+
+.label{
+    position: relative;
+    padding: 10px;
+    font-size: 24px;
+
+}
+.value{
+    position: absolute;
+    left: 43%;
+    top: 5%;
+    padding: 10px 0;
+}
+
+.trans-head{
+    font-size: 30px;
+    color: #333;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.paid{
+    position: relative;
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 24px;
+    color: gray;
+}
+
+.dues{
+    position: relative;
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 24px;
+    color: rgb(226, 45, 45);
+
+}
+
+.date{
+    position: absolute;
+    color: #333;
+    right: 5%;
+    bottom: 0%;
+    padding: 10px 0;
+
+}

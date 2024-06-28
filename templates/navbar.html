@@ -1,0 +1,25 @@
+{% load static %}
+
+<link rel='stylesheet'  href="{% static '/css/mobile/navbar_mobile.css' %}">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+<!-- <link rel='stylesheet'  href="{% static '/css/navbar.css' %}"> -->
+<div id="top-bar">
+    <div id = "main-header">
+        <a class = "head" href="/">RenTracker</a>
+        <div class="dropdown">
+            <img src="/static/images/settings.png" width="25px" height="20px">
+                <div class="dropdown-content">
+                <a href="{% url 'change password' %}">Change password</a>
+                <a href="{% url 'logout' %}">Log out</a>
+                </div>
+        </div>
+        
+    </div>
+
+    <div id = "navbar">
+        <a class="link-1" href="/"><div>Renter</div></a>
+        <a class="link-2" href="/property_details"><div>Properties</div></a>
+        <a class="link-3" href="/transaction_details"><div>Payments</div></a>
+    </div>
+
+</div>

@@ -1,0 +1,14 @@
+.label{
+    position: relative;
+    padding: 10px;
+    font-size: 24px;
+
+}
+
+.value{
+    position: absolute;
+    left: 30%;
+    bottom: 0%;
+    font-size: 24px;
+    padding: 10px 0;
+}

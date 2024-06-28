@@ -1,0 +1,17 @@
+#navbar .link-2 {
+    border-bottom: 5px white solid;
+}
+
+#navbar .link-2 div{
+    padding-top: 10px;
+    color: white;
+}
+
+
+@media screen and (max-width: 500px){
+    #navbar .link-2 {
+        border-bottom: none;
+        border-top: 5px white solid;
+    }
+
+}

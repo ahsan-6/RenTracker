@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Property</title>
+    <link rel='stylesheet'  href="{% static '/css/mobile/property.css' %}">
+
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <div class="cont">
+        <div class="label">Address<div class="value">{{propData.address}}</div></div>
+        <div class="label">Type<div class="value">{{propData.propType}}</div></div>
+        <div class="label">Rent<div class="value">{{propData.rent}}</div></div>
+        <div class="label">Renter<a href = "/renter/{{renterData.id}}"><div class="value">{{renterData.name}}</div></a></div>
+    
+
+        <a class="edit-buttons" href="{% url 'edit property' propData.id %}"><img src="/static/images/edit-button.png" width="30px"></a>
+        <div class="blank"></div>
+    </div>
+</body>
+</html>
