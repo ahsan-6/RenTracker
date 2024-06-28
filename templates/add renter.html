@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Add Renter</title>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <div class = "forms">
+        <div id="page-heading">Add renter</div>
+
+        <form action="" method = "POST">
+            {% csrf_token %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="msg">{{message}}</div>
+                {% endfor %}
+            {% endif %}
+
+            <div class = "block">Name:</div>
+            <input type="text" name="name" placeholder = "Enter name">
+            <br>
+            
+            <div class = "block">Property:</div>
+            <select name = "propertyId">
+                {% for i in propData %}
+                    {% if i.occupied == False %}
+                        <option value = '{{i.id}}'>{{i.address}}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+            <br>
+
+            <div class = "block">Home address:</div>
+            <textarea name = "homeAddr" ></textarea>
+            <br>
+
+            <div class = "block">Phone no.:</div>
+            <input type="tel" name="phNo" placeholder = "Enter number">
+            <br>
+
+            <div class = "block">E-Mail:</div>
+            <input type="email" name="email" placeholder = "Enter email id">
+            <br>
+
+            <div class = "block">Date Joined:</div>
+            <input type="date" name = "dateJoined">
+            <br>
+            
+        
+            <input class="form-buttons" type = "submit" value = 'Save'>
+            
+        
+
+        </form>
+    </div>
+</body>
+</html>

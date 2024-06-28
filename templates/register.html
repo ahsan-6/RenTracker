@@ -1,0 +1,24 @@
+{% load static %}
+
+{% include 'head.html' %}
+<head>
+    <title>RenTracker</title>
+</head>
+
+
+<body>
+    
+    <div class="log-reg">
+        <div class="forms">
+            <form method="post" action="">
+                {% csrf_token %}
+
+                {{form.as_p}}
+                <input class="form-buttons" type="submit" value="Sign Up">
+
+            </form>
+            <div>Already registered? <a href="{% url 'login' %}">Log in</a> </div>
+        </div>
+    </div>
+    <div class="blank"></div>
+</body>

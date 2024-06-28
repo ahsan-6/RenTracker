@@ -1,0 +1,33 @@
+
+#navbar .link-3 {
+    border-bottom: 5px white solid;
+}
+#navbar .link-3 div{
+    padding-top: 10px;
+    color: white;
+}
+
+
+.paid{
+    position: absolute;
+    font-size: 24px;
+    right: 5%;
+    top: 10%;
+}
+
+.date{
+    position: absolute;
+    font-size: 20px;
+    color: gray;
+    right: 5%;
+    bottom: 10%;
+}
+
+@media screen and (max-width: 500px){
+    #navbar .link-3 {
+        border-bottom: none;
+        border-top: 5px white solid;
+    }
+
+}
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Add Transaction</title>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <div class = "forms">
+        <div id="page-heading">
+            Add Transaction
+        </div>
+
+        <form action="" method = "POST">
+            {% csrf_token %}
+
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="msg">{{message}}</div>
+                {% endfor %}
+            {% endif %}
+            <div>Name of renter:</div>
+            <select name="renterId">
+                {% for i in renterData %}
+                    <option value = {{i.id}}>{{i.name}}</option>
+                {% endfor %}
+            </select>
+            <br>
+            
+            <div>Type:</div>
+            <select name="option">
+                <option value="payment">Payment</option>
+                <option value="dues">Dues</option>
+            </select>
+            <br>
+
+            <div>Amount:</div>
+            <input type="number" name="paid" placeholder = "Enter amount">
+            <br>
+
+            <div>Date of payment:</div>
+            <input type="date" name = "date">
+            <br>
+        
+            <input class="form-buttons" type = "submit" value = 'Save'>
+            
+            
+        </form>
+        <!-- <a class="buttons" href = "/transaction_details">Back</a>    -->
+    </div>    
+</body>
+</html>

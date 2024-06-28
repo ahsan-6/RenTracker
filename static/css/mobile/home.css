@@ -1,0 +1,39 @@
+#navbar .link-1 {
+    border-bottom: 5px white solid;
+}
+#navbar .link-1 div{
+    padding-top: 10px;
+    color: white;
+}
+
+.dues{
+    position: absolute;
+    color: rgb(226, 45, 45);
+    right: 5%;
+    top: 20%;
+    font-size:24px;
+}
+
+.bal{
+    position: absolute;
+    right: 5%;
+    bottom: 30%;
+    font-size:20px;
+    color: gray;
+}
+
+.kind{
+    position: absolute;
+    color: rgb(226, 45, 45);
+    font-size: 20px;
+    right: 5%;
+    bottom:10%;
+}
+
+@media screen and (max-width: 500px){
+    #navbar .link-1 {
+        border-bottom: none;
+        border-top: 5px white solid;
+    }
+
+}

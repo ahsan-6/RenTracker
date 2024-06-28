@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- <meta charset='utf-8'> -->
+    <title>Renter</title>
+    <link rel='stylesheet'  href="{% static '/css/mobile/renter.css' %}">
+
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <div class="cont">
+        <div class="name">{{renterData.name}}</div>
+        <div class="label">Property<div class="value"><a href = "/property/{{renterData.property.id}}">{{renterData.property.address}}</a></div></div>
+        <div class="label">Rent<div class="value">{{renterData.property.rent}}</div></div>
+        <div class="label">Home Address<div class="value">{{renterData.homeAddr}}</div></div>
+        <div class="label">Phone no.<div class="value">{{renterData.phNo}}</div></div>
+        <div class="label">email ID<div class="value">{{renterData.email}}</div></div>
+        <div class="label">Date Joined<div class="value">{{renterData.dateJoined}}</div></div>
+        <div class="label">Balance<div class="value">₹{{renterData.balance}}</div></div>
+        
+        <div class="trans-box">
+            <hr>
+            <div class="trans-head">Transactions</div>
+            <hr>
+            {% for i in transData %}
+                {% if i.dues == None %}
+                    <div class="paid">paid ₹{{i.paid}} <div class="date">{{i.date}}</div> </div>
+                {% else %}
+                    <div class="dues">due ₹{{i.dues}} <div class="date">{{i.date}}</div> </div>
+                {% endif %}
+                <hr>
+            {% endfor %}
+        </div>
+
+
+        <a class = "edit-buttons" href="{% url 'edit renter' renterData.id %}"><img src="/static/images/edit-button.png" width="30px"></a>
+        <div class="blank"></div>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% load static %}
+<head>
+    <title>Edit renter</title>
+</head>
+{% include 'navbar.html' %}
+<div class="forms">
+    <form method = "post">
+        {% csrf_token %}
+        {{form.as_p}}
+        
+
+        <input class="form-buttons" type="submit" value="Save">
+        
+    </form>
+    <div class="blank"></div>
+
+
+</div>

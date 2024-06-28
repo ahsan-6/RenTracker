@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Transaction details</title>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+    <link rel='stylesheet'  href="{% static '/css/mobile/transaction_details.css' %}">
+
+</head>
+<body>
+    {% include 'navbar.html' %}
+    
+    <div class="cont">
+        {% for i in transData %}
+            <a href="/renter/{{i.renter.id}}"> <div class="rows">{{i.renter.name}} <div class="paid">₹{{i.paid}}</div> <div class="date">{{i.date}}</div> </div> </a>
+            <hr>
+        {% endfor %}
+        <div class="blank"></div>
+    </div>
+    <a class = "buttons" href="/add_transaction">Add transaction</a>
+
+
+
+</body>
+</html>

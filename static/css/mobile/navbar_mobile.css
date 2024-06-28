@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+a.head{
+    color:white;
+}
+#top-bar{
+    background-image: linear-gradient(to right, #e02918 , #c202cc); 
+}
+
+body{
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+}
+
+#main-header{
+    background-image: linear-gradient(to right, #e02918 , #c202cc);
+    position: relative;
+    text-align: left;
+    font-size: 36px;
+    font-weight: bold;
+    padding: 20px 0px;
+    padding-left: 20%;
+}
+
+.dropdown{
+    position: absolute;
+    /* position: relative; */
+    display: inline;
+    right: 10%;
+    /* left: 70%; */
+}
+.dropdown-content{
+    background-color: white;
+    position: absolute;
+    width: max-content;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right:0%;
+    display: none;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.dropdown-content a{
+    color:#333;
+    padding: 5px 10px;
+    font-size: 24px;
+    font-weight: normal;
+    display: block;
+    border-radius: 5px;
+
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover{
+    background-color: lightgray;
+}
+
+#navbar{
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    color:lightgray;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar div{
+    padding: 15px 0;
+}
+
+.cont{
+    width: 60%;
+    margin: auto;
+}
+.log-reg{
+    width: 50%;
+    margin: auto;
+    padding-top: 20px;
+}
+.msg{
+    text-align: center;
+    color: red;
+    padding: 5px 10px;
+    border: red solid 2px;
+    border-radius: 10px;
+}
+
+.link-1{
+    width: 200px;
+    color: lightgray;
+    text-align: center;
+}
+
+.link-2{
+    width: 200px;
+    color: lightgray;
+    text-align: center;
+}
+
+.link-3{
+    width: 200px;
+    color: lightgray;
+    text-align: center;
+}
+
+.buttons{
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    color:rgb(255, 255, 255);
+    padding: 10px;
+    background-color: #333;
+    /* border: 3px #333 solid; */
+    border-radius: 15px;
+}
+.buttons:hover{
+    /* color:#333; */
+    /* background-color:rgb(255, 255, 255); */
+    background-color: rgb(83, 83, 83);
+}
+
+.edit-buttons{
+    position: fixed;
+    bottom: 5%;
+    right: 5%; 
+    border-radius: 15px;
+}
+
+
+/* form */
+#page-heading{
+    padding: 20px;
+    text-align: center;
+    font-size: 28px;
+}
+.forms{
+    width: 70%;
+    margin: auto;
+    font-size: 24px;
+}
+.block{
+    display: block;
+}
+
+.forms input, select, textarea{
+    width: 100%;
+    font-size: 24px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.forms input[type="date"]{
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.form-buttons{
+    margin: auto;
+    color:white;
+    font-size: 24px; 
+    padding: 5px 10px;
+    background-color: #333;
+    border: 3px #333 solid;
+    border-radius: 10px;
+}
+.form-buttons:hover{
+    color:#333;
+    background-color: white;
+}
+
+.rows{
+    position: relative;
+    font-size: 24px;
+    padding: 20px;  
+    color: #333;
+}
+.rows:hover{
+    background-color: rgb(230, 230, 230);
+}
+
+hr{
+    border: 0.5px solid lightgray;
+}
+
+.blank{
+    padding: 50px;
+}
+
+@media screen and (max-width: 500px){
+    #main-header{
+        padding-left: 5%;
+    }
+    .dropdown{
+        right: 5%;
+    }
+    .dropdown-content a{
+        padding: 10px 20px;
+    }
+
+    .cont{
+        width: 100%;
+    }
+
+    .log-reg{
+        width: 100%;
+    }
+
+    .rows:hover{
+        background-color: white;
+    }
+
+    .link-1{
+        flex: 1;
+        color: lightgray;
+        text-align: center;
+    }
+    
+    .link-2{
+        flex: 1;
+        color: lightgray;
+        text-align: center;
+    }
+    
+    .link-3{
+        flex: 1;
+        color: lightgray;
+        text-align: center;
+    }
+
+    .forms{
+        width: 90%;
+    }
+    .forms input[type="date"]{
+        width: fit-content;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+    
+}
